@@ -13,5 +13,17 @@ def añadirApp(nombre,proveedor,precio,fecha):
     with open('aplicaciones.txt',mode='a',encoding='utf-8')as archivo:
         archivo.write(identificaion+","+precio+","+numeroDes+","+numeroPunt+","+puntuacion+","+numComen+"\n")
 
+def sumar(aplicacion):
+
+     aplicaionN=""
+     with open('aplicaciones.txt',mode='r+',encoding='utf-8')as archivo:
+         for linia in archivo:
+            nombre,proveedor,fecha,precio,numeroDes,numeroPunt,puntuacio,numeroComen = linia.split(',',7)
+            numeroPunt=puntuacio.strip("\n")
+
+            aplicaionN=linia.__contains__(aplicacion)
+            print (aplicaionN)
+            archivo.write()
+
 
 #añadirApp("app1","prov1","0","22-02-2014")
