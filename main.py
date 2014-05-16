@@ -27,6 +27,20 @@ def sumar(aplicacion):
             npuntuacion=npuntuacion+1
             if aplicaionN==True:
                 archivo.write(nombre,proveedor,fecha,precio,numeroDes,numeroPunt,npuntuacion,numeroComen)
+def sumarComentario(aplicacion):
+
+     aplicaionN=""
+     with open('aplicaciones.txt',mode='r+',encoding='utf-8')as archivo:
+         for linia in archivo:
+            nombre,proveedor,fecha,precio,numeroDes,numeroPunt,puntuacio,numeroComen = linia.split(',',7)
+            aplicaionN=numeroComen.strip("\n")
+
+            aplicaionN=linia.__contains__(aplicacion)
+            print (aplicaionN)
+            print(npuntuacion)
+            numeroComent=numeroComen+1
+            if aplicaionN==True:
+                archivo.write(nombre,proveedor,fecha,precio,numeroDes,numeroPunt,npuntuacion,numeroComent)
 
 
 #añadirApp("app1","prov1","0","22-02-2014")
