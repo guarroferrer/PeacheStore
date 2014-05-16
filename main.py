@@ -25,7 +25,8 @@ def sumar(aplicacion):
             print (aplicaionN)
             print(npuntuacion)
             npuntuacion=npuntuacion+1
-            archivo.write(nombre,proveedor,fecha,precio,numeroDes,numeroPunt,npuntuacion,numeroComen)
+            if aplicaionN==True:
+                archivo.write(nombre,proveedor,fecha,precio,numeroDes,numeroPunt,npuntuacion,numeroComen)
 
 
 #añadirApp("app1","prov1","0","22-02-2014")
