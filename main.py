@@ -12,3 +12,6 @@ def añadirApp(nombre,proveedor,precio,fecha):
     numComen="0"
     with open('aplicaciones.txt',mode='a',encoding='utf-8')as archivo:
         archivo.write(identificaion+","+precio+","+numeroDes+","+numeroPunt+","+puntuacion+","+numComen+"\n")
+
+
+#añadirApp("app1","prov1","0","22-02-2014")
