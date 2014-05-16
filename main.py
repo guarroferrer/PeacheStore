@@ -19,11 +19,13 @@ def sumar(aplicacion):
      with open('aplicaciones.txt',mode='r+',encoding='utf-8')as archivo:
          for linia in archivo:
             nombre,proveedor,fecha,precio,numeroDes,numeroPunt,puntuacio,numeroComen = linia.split(',',7)
-            numeroPunt=puntuacio.strip("\n")
+            npuntuacion=puntuacio.strip("\n")
 
             aplicaionN=linia.__contains__(aplicacion)
             print (aplicaionN)
-            archivo.write()
+            print(npuntuacion)
+            npuntuacion=npuntuacion+1
+            archivo.write(nombre,proveedor,fecha,precio,numeroDes,numeroPunt,npuntuacion,numeroComen)
 
 
 #añadirApp("app1","prov1","0","22-02-2014")
